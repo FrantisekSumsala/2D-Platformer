@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject groundCheckGameObject;
 
+    [SerializeField]
+    private float groundCheckLength;
+
+    [SerializeField]
+    private float groundCheckHeight;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -40,7 +46,9 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(new Vector2(horizontalForce, 0f), ForceMode2D.Force);
 
         // flying detection
-        if (Physics2D.BoxCast(groundCheckGameObject.transform.position, new Vector2(0.7f, 0.001f), 0f, Vector2.zero, 1f, LayerMask.GetMask("Terrain")))
+        if (Physics2D.BoxCast(groundCheckGameObject.transform.position, 
+            new Vector2(groundCheckLength, groundCheckHeight), 
+            0f, Vector2.zero, 1f, LayerMask.GetMask("Terrain")))
         {
             inAir = false;
         }
