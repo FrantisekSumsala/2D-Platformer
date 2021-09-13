@@ -8,13 +8,16 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalAxisInput = 0f;
     private bool jump = false;
-    private bool inAir = false;
+    private bool inAir = true;
 
     [SerializeField]
     private float movementSpeed = 1f;
 
     [SerializeField]
     private float jumpForce = 1f;
+
+    [SerializeField]
+    private GameObject groundCheckGameObject;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,31 +29,28 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalAxisInput = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        if (Input.GetKeyDown(KeyCode.Space) && !inAir)
             jump = true;
-        } 
     }
 
     private void FixedUpdate()
     {
+        // horizontal movement
         float horizontalForce = horizontalAxisInput * movementSpeed * Time.fixedDeltaTime;
-        float verticalForce = 0f;
-
-
-
-        //rb.MovePosition(rb.position + new Vector2(horizontalForce, rb.position.y));
-
-        Debug.Log($"Horizontal force: {horizontalForce}");
-        Debug.Log($"Vertical force: {verticalForce}");
-
         rb.AddForce(new Vector2(horizontalForce, 0f), ForceMode2D.Force);
 
+        // flying detection
+        if (Physics2D.BoxCast(groundCheckGameObject.transform.position, new Vector2(0.7f, 0.001f), 0f, Vector2.zero, 1f, LayerMask.GetMask("Terrain")))
+        {
+            inAir = false;
+        }
+
+        // jumping
         if (jump && !inAir)
         {
-            verticalForce = jumpForce;
-            jump = false;
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            jump = false;
+            inAir = true;
         }
     }
 }
