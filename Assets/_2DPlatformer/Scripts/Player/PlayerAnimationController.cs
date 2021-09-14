@@ -25,7 +25,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         animator.SetFloat("horizontalSpeed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("verticalSpeed", rb.velocity.y);
-        
+
         // Todo: handle player hit
     }
 }

@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float groundCheckHeight;
 
+    [SerializeField]
+    private float maxVelocity;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -60,5 +63,6 @@ public class PlayerMovement : MonoBehaviour
             jump = false;
             inAir = true;
         }
+        
     }
 }
