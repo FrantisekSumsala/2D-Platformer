@@ -28,4 +28,9 @@ public class PlayerAnimationController : MonoBehaviour
 
         // Todo: handle player hit
     }
+
+    public void PlayHitAnim()
+    {
+        animator.Play("Player_Anim_Hit");
+    }
 }

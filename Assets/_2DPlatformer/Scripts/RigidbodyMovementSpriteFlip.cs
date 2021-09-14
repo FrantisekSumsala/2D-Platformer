@@ -22,9 +22,14 @@ public class RigidbodyMovementSpriteFlip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x < -0.001f)
+        //if (rb.velocity.x < -0.001f)
+        //    sr.flipX = true;
+        //else if (rb.velocity.x > 0.001f)
+        //    sr.flipX = false;
+
+        if (Input.GetAxisRaw("Horizontal") < -0.001f)
             sr.flipX = true;
-        else if (rb.velocity.x > 0.001f)
+        else if (Input.GetAxisRaw("Horizontal") > 0.001f)
             sr.flipX = false;
     }
 }

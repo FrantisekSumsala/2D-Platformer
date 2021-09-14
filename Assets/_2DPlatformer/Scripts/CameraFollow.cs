@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
-    private Transform camera;
+    private Transform cam;
 
     [SerializeField]
     private Transform player;
@@ -31,7 +31,7 @@ public class CameraFollow : MonoBehaviour
         if (yPos > verticalLimits.y)
             yPos = verticalLimits.y;
 
-        camera.position = new Vector3(xPos, yPos, camera.position.z);
+        cam.position = new Vector3(xPos, yPos, cam.position.z);
     }
 
 }
