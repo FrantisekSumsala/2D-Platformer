@@ -17,6 +17,9 @@ public class PlayerDamagable : MonoBehaviour
     [SerializeField]
     private float knockbackStrength = 0f;
 
+    [SerializeField]
+    private bool destroyOnContact = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ignore layers that are not targeted
@@ -34,7 +37,9 @@ public class PlayerDamagable : MonoBehaviour
 
         collision.attachedRigidbody.velocity = Vector2.zero;
         collision.attachedRigidbody.AddForce(knockbackForce, ForceMode2D.Impulse);
-    }
 
+        if (destroyOnContact)
+            Destroy(gameObject);
+    }
 
 }
