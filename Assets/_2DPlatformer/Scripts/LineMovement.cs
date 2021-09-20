@@ -11,9 +11,40 @@ public class LineMovement : Movement
     [SerializeField]
     private int startingPointIndex;
 
+    [SerializeField]
+    private bool useRigidbody;
+
+    [SerializeField]
+    private Rigidbody2D rb;
+
     private Vector3[] points;
 
     private int nextPointIndex;
+
+    protected override void FixedUpdate()
+    {
+        if (!useRigidbody)
+            return;
+
+        Vector3 curPos = gameObject.transform.position;
+        Vector3 targetPos = points[nextPointIndex];
+        float distanceToTarget = Vector3.Distance(curPos, targetPos);
+        float travelDistance = movementSpeed * Time.fixedDeltaTime;
+
+        if (travelDistance < distanceToTarget)
+            rb.MovePosition(curPos + movementDirection.normalized * travelDistance);
+        else
+        {
+            rb.MovePosition(targetPos);
+
+            //move to next point
+            nextPointIndex++;
+            if (nextPointIndex >= points.Length)
+                nextPointIndex = 0;
+
+            movementDirection = (points[nextPointIndex] - targetPos).normalized;
+        }
+    }
 
     protected override void Start()
     {
@@ -42,6 +73,9 @@ public class LineMovement : Movement
     // Update is called once per frame
     protected override void Update()
     {
+        if (useRigidbody)
+            return;
+
         Vector3 curPos = gameObject.transform.position;
         Vector3 targetPos = points[nextPointIndex];
         float distanceToTarget = Vector3.Distance(curPos, targetPos);

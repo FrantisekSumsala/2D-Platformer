@@ -11,4 +11,6 @@ public abstract class Movement : MonoBehaviour
 
     protected abstract void Start();
     protected abstract void Update();
+
+    protected abstract void FixedUpdate();
 }
