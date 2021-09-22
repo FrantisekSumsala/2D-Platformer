@@ -26,17 +26,20 @@ public class PlayerDamagable : MonoBehaviour
         if ((damagableLayers.value & 1 << collision.gameObject.layer) == 0)
             return;
 
-        EntityHealth entityHealth = collision.gameObject.GetComponentInChildren<EntityHealth>();
-        if (entityHealth == null)
-            Debug.LogError($"Damage collision without corresponding entity health!\nCollisions object names: {gameObject.name}, {collision.gameObject.name}");
+        OnPlayerDamageTaken playerDamage = collision.gameObject.GetComponentInChildren<OnPlayerDamageTaken>();
+        playerDamage.GetHit(gameObject.transform.position, damageAmount);
 
-        entityHealth.ChangeHealth(-damageAmount);
+        //EntityHealth entityHealth = collision.gameObject.GetComponentInChildren<EntityHealth>();
+        //if (entityHealth == null)
+        //    Debug.LogError($"Damage collision without corresponding entity health!\nCollisions object names: {gameObject.name}, {collision.gameObject.name}");
 
-        Vector2 posDif = collision.transform.position - gameObject.transform.position;
-        Vector2 knockbackForce = new Vector2(posDif.normalized.x, verticalKnockback).normalized * knockbackStrength;
+        //entityHealth.ChangeHealth(-damageAmount);
 
-        collision.attachedRigidbody.velocity = Vector2.zero;
-        collision.attachedRigidbody.AddForce(knockbackForce, ForceMode2D.Impulse);
+        //Vector2 posDif = collision.transform.position - gameObject.transform.position;
+        //Vector2 knockbackForce = new Vector2(posDif.normalized.x, verticalKnockback).normalized * knockbackStrength;
+
+        //collision.attachedRigidbody.velocity = Vector2.zero;
+        //collision.attachedRigidbody.AddForce(knockbackForce, ForceMode2D.Impulse);
 
         if (destroyOnContact)
             Destroy(gameObject);

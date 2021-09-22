@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float maxVelocity;
+
+    public event Action OnJump;
+
+    public bool IsInAir { get { return inAir; } }
 
     // Start is called before the first frame update
     void Awake()
@@ -62,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jump = false;
             inAir = true;
+
+            OnJump?.Invoke();
         }
         
     }
