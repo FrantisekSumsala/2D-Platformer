@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 17ddfaa2f73be344094fd022757a81cb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Blitzkrieg NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5123f96e9a3801d449d3541d1eea5c2c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
