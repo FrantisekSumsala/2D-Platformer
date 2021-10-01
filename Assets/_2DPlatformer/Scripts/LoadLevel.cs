@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEditor;
+
+public class LoadLevel : MonoBehaviour
+{
+    [SerializeField]
+    private string sceneName;
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+}
