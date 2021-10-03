@@ -28,4 +28,5 @@ public class JSONGameSave : IGameDataLoader, IGameDataSaver
 
         File.WriteAllText(savePath, saveText);
     }
+
 }
