@@ -8,7 +8,7 @@ public class TimeCounter : MonoBehaviour
 
     private void Update()
     {
-        LevelTime = Time.time;
+        LevelTime += Time.deltaTime;
     }
 
 }
