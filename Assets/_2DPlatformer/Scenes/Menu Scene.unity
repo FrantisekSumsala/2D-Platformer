@@ -7385,6 +7385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65e656ef598d9e4587e3e071ecdf837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyDuplicateGameObjects: 1
   mixer: {fileID: 24100000, guid: 5b7b94fb71cc4894b9965d9463177b35, type: 2}
 --- !u!114 &1982519117
 MonoBehaviour:
