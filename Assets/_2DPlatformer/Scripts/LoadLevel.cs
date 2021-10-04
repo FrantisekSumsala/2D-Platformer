@@ -14,4 +14,15 @@ public class LoadLevel : MonoBehaviour
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
+    public void LoadSceneDelayed()
+    {
+        StartCoroutine(DelayedSceneLoad());
+    }
+
+    private IEnumerator DelayedSceneLoad()
+    {
+        yield return new WaitForEndOfFrame();
+        LoadScene();
+        yield return null;
+    }
 }

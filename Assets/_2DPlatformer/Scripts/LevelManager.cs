@@ -20,10 +20,17 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private UnityEngine.UI.Image blackScreen;
 
+    [SerializeField]
+    private GameTimePause timePause;
+
+    [SerializeField]
+    private GameObject victoryCanvas;
+
     private void OnEnable()
     {
         levelFinish.OnPlayerFinish += FinishLevel;
         playerHealth.EntityDied += ResetLevel;
+        Time.timeScale = 1f;
     }
 
     private void OnDisable()
@@ -40,7 +47,8 @@ public class LevelManager : MonoBehaviour
 
     private void FinishLevel()
     {
-        throw new System.NotImplementedException();
+        victoryCanvas.SetActive(true);
+        timePause.Pause();
     }
 
     private IEnumerator ReloadLevel()
