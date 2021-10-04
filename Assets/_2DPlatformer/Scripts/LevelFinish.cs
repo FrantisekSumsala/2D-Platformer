@@ -26,13 +26,11 @@ public class LevelFinish : MonoBehaviour
     {
         if (timer >= updateRate)
         {
-            Debug.Log("Finish Check");
-
             var hit = Physics2D.BoxCast(finishPoint.position, finishSize, 0f, Vector2.zero, 1f, playerLayer);
             if (hit.transform != null)
             {
-                Debug.Log("Finish hit");
                 OnPlayerFinish?.Invoke();
+                gameObject.SetActive(false);
             }
         }
 

@@ -26,6 +26,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject victoryCanvas;
 
+    [SerializeField]
+    private AudioClip victorySound;
+
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void OnEnable()
     {
         levelFinish.OnPlayerFinish += FinishLevel;
@@ -47,6 +53,8 @@ public class LevelManager : MonoBehaviour
 
     private void FinishLevel()
     {
+        audioSource.clip = victorySound;
+        audioSource.Play();
         victoryCanvas.SetActive(true);
         timePause.Pause();
     }
