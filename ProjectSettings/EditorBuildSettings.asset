@@ -11,4 +11,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_2DPlatformer/Scenes/TestScene.unity
     guid: 975b1d44cd5fc9040bafea8546a8ae2c
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level1.unity
+    guid: 4488535b67107ba48b71f36f893f39a9
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level2.unity
+    guid: c50623b490a4bc1458959c9a539f3235
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level3.unity
+    guid: 70f74b4764de7db4db131e7a70637de0
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level4.unity
+    guid: 2976d264baa621d479626eeafd3b21e0
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level5.unity
+    guid: ad3a0624d46035b499758d794c597145
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level6.unity
+    guid: 315b7f937baebed468ea83c73d088397
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level7.unity
+    guid: fbf1780d3ded5e946899e6d48d7abc6a
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level8.unity
+    guid: 65ae082137e8094438ca137048690901
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level9.unity
+    guid: b8aafc0c8b12b7f4b906830ab35a1414
+  - enabled: 1
+    path: Assets/_2DPlatformer/Scenes/Level10.unity
+    guid: 2563750d84114824184e5a6376be0e08
   m_configObjects: {}
