@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 94614323276840533}
   - component: {fileID: 94614323276840529}
   - component: {fileID: 94614323276840528}
+  - component: {fileID: 672811292006774038}
   - component: {fileID: 94614323276840542}
   - component: {fileID: 94614323276840531}
   - component: {fileID: 94614323276840530}
@@ -165,6 +166,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.48
+--- !u!50 &672811292006774038
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94614323276840532}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!95 &94614323276840542
 Animator:
   serializedVersion: 3
@@ -200,8 +222,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damageAmount: 1
-  verticalKnockback: 0.9
-  knockbackStrength: 15
   destroyOnContact: 0
 --- !u!114 &94614323276840530
 MonoBehaviour:
@@ -220,6 +240,8 @@ MonoBehaviour:
   - {fileID: 94614322655898737}
   - {fileID: 94614323549682828}
   startingPointIndex: 1
+  useRigidbody: 0
+  rb: {fileID: 0}
 --- !u!114 &94614323276840543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +258,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damageAmount: 1
-  verticalKnockback: 0.9
-  knockbackStrength: 15
   destroyOnContact: 0
 --- !u!1 &94614323549682831
 GameObject:

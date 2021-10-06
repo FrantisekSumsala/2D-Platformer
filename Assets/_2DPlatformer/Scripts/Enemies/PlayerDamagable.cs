@@ -10,13 +10,6 @@ public class PlayerDamagable : MonoBehaviour
     [SerializeField]
     private int damageAmount;
 
-    [Range(0f, 1f)]
-    [SerializeField]
-    private float verticalKnockback;
-
-    [SerializeField]
-    private float knockbackStrength = 0f;
-
     [SerializeField]
     private bool destroyOnContact = false;
 
@@ -28,18 +21,6 @@ public class PlayerDamagable : MonoBehaviour
 
         OnPlayerDamageTaken playerDamage = collision.gameObject.GetComponentInChildren<OnPlayerDamageTaken>();
         playerDamage.GetHit(gameObject.transform.position, damageAmount);
-
-        //EntityHealth entityHealth = collision.gameObject.GetComponentInChildren<EntityHealth>();
-        //if (entityHealth == null)
-        //    Debug.LogError($"Damage collision without corresponding entity health!\nCollisions object names: {gameObject.name}, {collision.gameObject.name}");
-
-        //entityHealth.ChangeHealth(-damageAmount);
-
-        //Vector2 posDif = collision.transform.position - gameObject.transform.position;
-        //Vector2 knockbackForce = new Vector2(posDif.normalized.x, verticalKnockback).normalized * knockbackStrength;
-
-        //collision.attachedRigidbody.velocity = Vector2.zero;
-        //collision.attachedRigidbody.AddForce(knockbackForce, ForceMode2D.Impulse);
 
         if (destroyOnContact)
             Destroy(gameObject);
