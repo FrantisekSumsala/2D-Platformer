@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 22348249}
   - component: {fileID: 22348248}
   - component: {fileID: 22348247}
+  - component: {fileID: 22348250}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -364,6 +365,7 @@ MonoBehaviour:
   victoryCanvas: {fileID: 530099779}
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 22348247}
+  levelTimer: {fileID: 1439348947}
 --- !u!4 &22348249
 Transform:
   m_ObjectHideFlags: 0
@@ -380,6 +382,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22348250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22348246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8baf9b50dd4c8440ac6776fbd2a6fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &25660677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2414,7 +2428,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3242,6 +3256,7 @@ GameObject:
   - component: {fileID: 530099782}
   - component: {fileID: 530099781}
   - component: {fileID: 530099780}
+  - component: {fileID: 530099784}
   m_Layer: 5
   m_Name: Victory Canvas
   m_TagString: Untagged
@@ -3330,6 +3345,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &530099784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530099779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42837c9efcc9d94ba769718917e0d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: {fileID: 1439348947}
+  clearTimeText: {fileID: 985990602}
+  bestClearTimeText: {fileID: 275846184}
 --- !u!1 &537621189
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,7 +9971,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10187,7 +10217,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11035,6 +11065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439348946}
   - component: {fileID: 1439348945}
+  - component: {fileID: 1439348947}
   m_Layer: 0
   m_Name: Level Timer
   m_TagString: Untagged
@@ -11068,6 +11099,20 @@ Transform:
   m_Father: {fileID: 22348249}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439348947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439348944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a083cfa71c0b44eb032da8d53cb94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 1439348945}
+  saveLoad: {fileID: 22348250}
 --- !u!1 &1496089667
 GameObject:
   m_ObjectHideFlags: 0
@@ -43385,7 +43430,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -44167,7 +44212,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

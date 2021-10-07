@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2807,6 +2807,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8326957940636350776, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}
       propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326957940636350776, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}
+      propertyPath: m_GravityScale
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8326957940636350779, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}
@@ -2928,6 +2932,7 @@ GameObject:
   - component: {fileID: 790147876}
   - component: {fileID: 790147875}
   - component: {fileID: 790147874}
+  - component: {fileID: 790147877}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -3052,6 +3057,7 @@ MonoBehaviour:
   victoryCanvas: {fileID: 1963657421}
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 790147874}
+  levelTimer: {fileID: 1572369389}
 --- !u!4 &790147876
 Transform:
   m_ObjectHideFlags: 0
@@ -3068,6 +3074,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &790147877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790147873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8baf9b50dd4c8440ac6776fbd2a6fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &810625895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10408,7 +10426,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10542,7 +10560,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -45605,6 +45623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572369388}
   - component: {fileID: 1572369387}
+  - component: {fileID: 1572369389}
   m_Layer: 0
   m_Name: Level Timer
   m_TagString: Untagged
@@ -45638,6 +45657,20 @@ Transform:
   m_Father: {fileID: 790147876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572369389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572369386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a083cfa71c0b44eb032da8d53cb94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 1572369387}
+  saveLoad: {fileID: 790147877}
 --- !u!4 &1573039117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7857596761936594428, guid: 91ec1fef31e175b41bc1f4b338379c85, type: 3}
@@ -46457,7 +46490,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -48114,6 +48147,7 @@ GameObject:
   - component: {fileID: 1963657424}
   - component: {fileID: 1963657423}
   - component: {fileID: 1963657422}
+  - component: {fileID: 1963657426}
   m_Layer: 5
   m_Name: Victory Canvas
   m_TagString: Untagged
@@ -48202,6 +48236,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1963657426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963657421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42837c9efcc9d94ba769718917e0d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: {fileID: 1572369389}
+  clearTimeText: {fileID: 272544608}
+  bestClearTimeText: {fileID: 1155707323}
 --- !u!1 &1975513181
 GameObject:
   m_ObjectHideFlags: 0
@@ -48757,6 +48806,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8326957940636350776, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}
       propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326957940636350776, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}
+      propertyPath: m_GravityScale
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8326957940636350779, guid: 178617f566ff8a647a7466bb99477c7c, type: 3}

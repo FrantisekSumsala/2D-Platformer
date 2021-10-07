@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 90861833}
   - component: {fileID: 90861832}
   - component: {fileID: 90861831}
+  - component: {fileID: 90861834}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -513,6 +514,7 @@ MonoBehaviour:
   victoryCanvas: {fileID: 1161794470}
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 90861831}
+  levelTimer: {fileID: 375585037}
 --- !u!4 &90861833
 Transform:
   m_ObjectHideFlags: 0
@@ -529,6 +531,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90861834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90861830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8baf9b50dd4c8440ac6776fbd2a6fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &93279389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9734,6 +9748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375585036}
   - component: {fileID: 375585035}
+  - component: {fileID: 375585037}
   m_Layer: 0
   m_Name: Level Timer
   m_TagString: Untagged
@@ -9767,6 +9782,20 @@ Transform:
   m_Father: {fileID: 90861833}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375585037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375585034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a083cfa71c0b44eb032da8d53cb94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 375585035}
+  saveLoad: {fileID: 90861834}
 --- !u!1001 &388458315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12129,7 +12158,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12268,7 +12297,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13690,6 +13719,7 @@ GameObject:
   - component: {fileID: 1161794473}
   - component: {fileID: 1161794472}
   - component: {fileID: 1161794471}
+  - component: {fileID: 1161794475}
   m_Layer: 5
   m_Name: Victory Canvas
   m_TagString: Untagged
@@ -13778,6 +13808,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1161794475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161794470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42837c9efcc9d94ba769718917e0d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTimer: {fileID: 375585037}
+  clearTimeText: {fileID: 1365115664}
+  bestClearTimeText: {fileID: 1630651681}
 --- !u!4 &1170312499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8174305946727925315, guid: 8731e1717c98f4d44b4bfa1829e5a980, type: 3}
@@ -14444,7 +14489,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16140,7 +16185,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16642,7 +16687,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

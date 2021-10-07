@@ -32,6 +32,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
+    [SerializeField]
+    private LevelTimer levelTimer;
+
     private void OnEnable()
     {
         levelFinish.OnPlayerFinish += FinishLevel;
@@ -55,6 +58,7 @@ public class LevelManager : MonoBehaviour
     {
         audioSource.clip = victorySound;
         audioSource.Play();
+        levelTimer.GetClearTimes();
         victoryCanvas.SetActive(true);
         timePause.Pause();
     }

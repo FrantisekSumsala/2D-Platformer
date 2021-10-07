@@ -6,15 +6,18 @@ using UnityEngine;
 public class LevelTimeDisplay : MonoBehaviour
 {
     [SerializeField]
-    private TimeCounter timeCounter;
+    private LevelTimer levelTimer;
 
     [SerializeField]
-    private TMP_Text timeDisplayText;
+    private TMP_Text clearTimeText;
 
+    [SerializeField]
+    private TMP_Text bestClearTimeText;
 
-    private void LateUpdate()
+    private void OnEnable()
     {
-        float time = timeCounter.LevelTime / 1000;
-        timeDisplayText.text = $"{timeCounter.LevelTime.ToString("0.000")}s";
+        float clearTime = levelTimer.ClearTime / 1000;
+        clearTimeText.text = $"{levelTimer.ClearTime.ToString("0.000")}s";
+        bestClearTimeText.text = $"{levelTimer.BestClearTime.ToString("0.000")}s";
     }
 }
