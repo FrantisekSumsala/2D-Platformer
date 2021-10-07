@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5127935824913820846}
   m_Layer: 0
-  m_Name: Moving Platform
+  m_Name: Moving Platform Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,13 +218,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ae6734f68725846b3d2b5f2b1274e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftSprite: {fileID: -2615569002567638836, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  centerSprite: {fileID: 772467259971446145, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  rightSprite: {fileID: -39983623799505075, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
+  leftSprite: {fileID: 3045001923454373135, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
+  centerSprite: {fileID: -5125620877619029284, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
+  rightSprite: {fileID: 6999343348047764492, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   numberOfCenterSprites: 3
   spriteLayerNumber: 10
   coll: {fileID: 1390417883676212293}
-  vertical: 0
+  vertical: 1
 --- !u!114 &9028990987989126223
 MonoBehaviour:
   m_ObjectHideFlags: 0

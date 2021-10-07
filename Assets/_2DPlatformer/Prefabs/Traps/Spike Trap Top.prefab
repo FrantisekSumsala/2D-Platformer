@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6231838678425631636}
   - component: {fileID: 7857596761936594430}
   m_Layer: 8
-  m_Name: Spike Trap
+  m_Name: Spike Trap Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

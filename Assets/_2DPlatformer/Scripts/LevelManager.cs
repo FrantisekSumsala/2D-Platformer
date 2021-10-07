@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
-    private void FinishLevel()
+    public void FinishLevel()
     {
         audioSource.clip = victorySound;
         audioSource.Play();
