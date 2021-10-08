@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/_2DPlatformer/Scenes/Menu Scene.unity
     guid: e104544d3146f284f877b593ed6580d2
   - enabled: 1
-    path: Assets/_2DPlatformer/Scenes/TestScene.unity
-    guid: 975b1d44cd5fc9040bafea8546a8ae2c
-  - enabled: 1
     path: Assets/_2DPlatformer/Scenes/Level1.unity
     guid: 4488535b67107ba48b71f36f893f39a9
   - enabled: 1
