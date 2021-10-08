@@ -267,7 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5590639146575711188}
   m_Layer: 0
-  m_Name: UI Button Small
+  m_Name: UI Button Small Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
