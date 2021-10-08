@@ -22296,6 +22296,7 @@ GameObject:
   - component: {fileID: 1513169313}
   - component: {fileID: 1513169314}
   - component: {fileID: 1513169315}
+  - component: {fileID: 1513169316}
   m_Layer: 0
   m_Name: BOSS
   m_TagString: Untagged
@@ -22504,6 +22505,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1513169316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513169310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d01689521209f841b10cf886849ef56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedObject: {fileID: 104683950}
+  objectRenderer: {fileID: 1513169311}
+  flipFacesToRight: 0
 --- !u!114 &1526178189 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2731419527395307436, guid: 1b6483aaa59b2044c9e626caec3a2972, type: 3}
