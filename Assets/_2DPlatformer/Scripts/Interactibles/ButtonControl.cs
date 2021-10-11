@@ -58,35 +58,12 @@ public class ButtonControl : MonoBehaviour
         timer += Time.time;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if ((interactibleLayers.value & 1 << collision.gameObject.layer) == 0)
-    //        return;
-
-    //    if (!buttonPressed)
-    //    {
-    //        buttonPressed = true;
-    //        OnButtonPressed.Invoke();
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if ((interactibleLayers.value & 1 << collision.gameObject.layer) == 0)
-    //        return;
-
-    //    buttonPressed = false;
-    //    OnButtonReleased.Invoke();
-    //}
-
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(new Vector3(scanOrigin.position.x, scanOrigin.position.y, 0f), new Vector3(scanSize.x, scanSize.y, 0f));
     }
-
-
 #endif
 
 }

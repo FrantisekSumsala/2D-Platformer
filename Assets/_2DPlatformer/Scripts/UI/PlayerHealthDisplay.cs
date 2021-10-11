@@ -38,17 +38,11 @@ public class PlayerHealthDisplay : MonoBehaviour
         for (int i = 0; i < newHealthValue; i++)
         {
             healthDisplays[i].sprite = filledHeart;
-            //Color c = healthDisplays[i].color;
-            //c.a = 1;
-            //healthDisplays[i].color = c;
         }
 
         for (int i = newHealthValue; i < healthDisplays.Length; i++)
         {
             healthDisplays[i].sprite = emptyHeart;
-            //Color c = healthDisplays[i].color;
-            //c.a = 0;
-            //healthDisplays[i].color = c;
         }
 
         canvas.enabled = true;

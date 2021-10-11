@@ -1229,12 +1229,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ecce734614e684caa4c619fc12fcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   movementSpeed: 2000
   jumpForce: 25
   groundCheckGameObject: {fileID: 1767366154}
   groundCheckLength: 0.7
   groundCheckHeight: 0.2
-  maxVelocity: 100
 --- !u!61 &104683954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22409,7 +22409,7 @@ MonoBehaviour:
   bossAnimName: Skull Boss Hit Anim
   bossAudio: {fileID: 1513169315}
   bossSound: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
-  renderer: {fileID: 1513169311}
+  bossRenderer: {fileID: 1513169311}
 --- !u!82 &1513169315
 AudioSource:
   m_ObjectHideFlags: 0

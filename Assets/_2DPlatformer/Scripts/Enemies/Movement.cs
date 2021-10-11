@@ -10,6 +10,7 @@ public abstract class Movement : MonoBehaviour
     public Vector3 movementDirection { protected set; get; }
 
     protected abstract void Start();
+
     protected abstract void Update();
 
     protected abstract void FixedUpdate();

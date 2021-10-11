@@ -3345,9 +3345,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'FREE Casual Game SFX Pack
+  m_text: 'Pixel Adventure 1 & 2
 
-    by Dustyroom'
+    by Pixel Frog'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4b53d082ad4e9e439846721ecbc789d, type: 2}
   m_sharedMaterial: {fileID: -4481693463807508959, guid: a4b53d082ad4e9e439846721ecbc789d, type: 2}

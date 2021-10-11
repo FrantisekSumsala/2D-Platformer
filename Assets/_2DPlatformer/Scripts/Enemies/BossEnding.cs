@@ -30,7 +30,7 @@ public class BossEnding : MonoBehaviour
     private AudioClip bossSound;
 
     [SerializeField]
-    private SpriteRenderer renderer;
+    private SpriteRenderer bossRenderer;
 
     public void KillBoss()
     {
@@ -46,7 +46,7 @@ public class BossEnding : MonoBehaviour
         yield return new WaitForSeconds(transitionDuration);
 
         bossText.text = "";
-        renderer.enabled = false;
+        bossRenderer.enabled = false;
         bossAudio.Stop();
         levelManager.FinishLevel();
         yield return null;

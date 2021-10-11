@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlatformSnap : MonoBehaviour
 {
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.transform.parent = gameObject.transform;
@@ -14,4 +13,5 @@ public class PlatformSnap : MonoBehaviour
     {
         collision.gameObject.transform.parent = null;
     }
+
 }

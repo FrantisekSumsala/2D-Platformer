@@ -11,7 +11,4 @@ public class SoundConfig : ScriptableObject
     public float volume;
 
     public bool loop;
-
-
-
 }

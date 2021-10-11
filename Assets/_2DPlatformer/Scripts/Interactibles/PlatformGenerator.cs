@@ -25,8 +25,7 @@ public class PlatformGenerator : MonoBehaviour
     [SerializeField]
     private bool vertical = false;
 
-    // Start is called before the first frame update
-    void OnEnable()
+    private void OnEnable()
     {
         int numTiles = numberOfCenterSprites + 2;
         float offset = numTiles % 2 == 0 ? 0.5f : 0f;

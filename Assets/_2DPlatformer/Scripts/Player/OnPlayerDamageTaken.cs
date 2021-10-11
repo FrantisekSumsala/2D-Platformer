@@ -31,19 +31,9 @@ public class OnPlayerDamageTaken : MonoBehaviour
     [SerializeField]
     private float knockbackStrength = 0f;
 
-    private float lastTimeHit = 0f;
-
     public event Action OnPlayerDamaged;
 
-    private void OnEnable()
-    {
-        //playerHealth.EntityDamaged += ProtectPlayer;
-    }
-
-    private void OnDisable()
-    {
-        //playerHealth.EntityDamaged -= ProtectPlayer;
-    }
+    private float lastTimeHit = 0f;
 
     public void GetHit(Vector3 damageSourcePos, int damageAmount)
     {
@@ -68,22 +58,6 @@ public class OnPlayerDamageTaken : MonoBehaviour
         StartCoroutine(UnfreezePlayer());
 
         OnPlayerDamaged?.Invoke();
-    }
-
-    private void ProtectPlayer()
-    {
-        playerHealth.enabled = false;
-        playerMovement.enabled = false;
-        StartCoroutine(UnfreezePlayer());
-
-        //Vector2 playerVel = playerRb.velocity.normalized;
-        //Vector2 knockbackForce = new Vector2(-playerVel.x, verticalKnockback) * knockbackStrength;
-        //playerRb.velocity = Vector2.zero;
-        //playerRb.AddForce(knockbackForce, ForceMode2D.Impulse);
-
-        
-
-        
     }
 
     private IEnumerator UnfreezePlayer()

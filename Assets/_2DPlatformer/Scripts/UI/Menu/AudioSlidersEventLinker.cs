@@ -22,5 +22,4 @@ public class AudioSlidersEventLinker : MonoBehaviour
         sfxVolumeSlider.onValueChanged.AddListener((newVal) => { audioManager.AdjustSFXVolume(newVal); });
     }
 
-
 }

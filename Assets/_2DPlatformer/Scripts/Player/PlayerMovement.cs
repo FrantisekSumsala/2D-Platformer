@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
     private Rigidbody2D rb;
 
     private float horizontalAxisInput = 0f;
@@ -26,21 +27,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float groundCheckHeight;
 
-    [SerializeField]
-    private float maxVelocity;
-
     public event Action OnJump;
 
     public bool IsInAir { get { return inAir; } }
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        if (rb == null)
+            rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         horizontalAxisInput = Input.GetAxisRaw("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && !inAir)

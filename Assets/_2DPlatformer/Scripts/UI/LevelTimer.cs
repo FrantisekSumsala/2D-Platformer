@@ -16,7 +16,6 @@ public class LevelTimer : MonoBehaviour
 
     public float BestClearTime { get; private set; }
 
-
     public void GetClearTimes()
     {
         ClearTime = timeCounter.LevelTime;

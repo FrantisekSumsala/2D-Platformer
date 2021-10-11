@@ -19,5 +19,4 @@ public class EnemySpriteFlip : MonoBehaviour
             enemyRenderer.flipX = true;
     }
 
-
 }

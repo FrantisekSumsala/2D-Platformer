@@ -33,7 +33,6 @@ public class TurretFire : MonoBehaviour
             animator.Play(shootAnimName);
             StartCoroutine(Shoot());
         }
-
     }
 
     private IEnumerator Shoot()
@@ -42,6 +41,5 @@ public class TurretFire : MonoBehaviour
         Instantiate(projectilePrefab, projectileCreationPoint.position, Quaternion.identity);
         yield return null;
     }
-
 
 }

@@ -10,8 +10,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         if (animator == null)
             animator = gameObject.GetComponentInParent<Animator>();
@@ -20,13 +19,10 @@ public class PlayerAnimationController : MonoBehaviour
             rb = gameObject.GetComponentInParent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         animator.SetFloat("horizontalSpeed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("verticalSpeed", rb.velocity.y);
-
-        // Todo: handle player hit
     }
 
     public void PlayHitAnim()

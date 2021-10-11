@@ -19,7 +19,6 @@ public class PlayerAudioManager : MonoBehaviour
     [SerializeField]
     private SoundConfig hitSound;
 
-    private bool isWalking = false;
     private bool jumped = false;
     private bool damaged = false;
 
@@ -38,8 +37,6 @@ public class PlayerAudioManager : MonoBehaviour
     {
         playerMovement.OnJump -= PlayJumpSound;
         playerDamage.OnPlayerDamaged -= PlayDamagedSound;
-
-
     }
 
     private void Update()
@@ -55,7 +52,6 @@ public class PlayerAudioManager : MonoBehaviour
             if (jumped)
             {
                 jumped = false;
-                isWalking = false;
                 PlaySound(jumpSound);
                 return;
             }

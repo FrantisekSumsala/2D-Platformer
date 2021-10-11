@@ -11,9 +11,6 @@ public class Projectile : MonoBehaviour
     private float movementSpeed;
 
     [SerializeField]
-    private SpriteRenderer projectileRenderer;
-
-    [SerializeField]
     private Rigidbody2D rb;
 
     private void FixedUpdate()

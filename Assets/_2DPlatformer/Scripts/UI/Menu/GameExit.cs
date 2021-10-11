@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameExit : MonoBehaviour
 {
-
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -13,6 +12,5 @@ public class GameExit : MonoBehaviour
 
         Application.Quit();
     }
-
 
 }

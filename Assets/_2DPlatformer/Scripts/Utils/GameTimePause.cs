@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameTimePause : MonoBehaviour
 {
-
     public void Pause()
     {
         Time.timeScale = 0f;

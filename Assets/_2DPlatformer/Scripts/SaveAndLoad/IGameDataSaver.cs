@@ -5,5 +5,4 @@ using UnityEngine;
 public interface IGameDataSaver 
 {
     void SaveGameData(GameSaveData gameData);
-
 }

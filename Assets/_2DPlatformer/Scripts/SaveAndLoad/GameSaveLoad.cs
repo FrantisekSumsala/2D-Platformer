@@ -53,9 +53,4 @@ public class GameSaveLoad : MonoBehaviour
         _gameData = gameLoad.LoadGameData();
     }
 
-    private void Start()
-    {
-        Debug.Log(GameData);
-    }
-
 }
