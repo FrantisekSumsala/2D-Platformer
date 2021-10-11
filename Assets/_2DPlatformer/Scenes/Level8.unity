@@ -515,6 +515,7 @@ MonoBehaviour:
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 90861831}
   levelTimer: {fileID: 375585037}
+  pauseButton: {fileID: 1343436114}
 --- !u!4 &90861833
 Transform:
   m_ObjectHideFlags: 0

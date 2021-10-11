@@ -31380,6 +31380,7 @@ MonoBehaviour:
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 1718821482}
   levelTimer: {fileID: 2125954198}
+  pauseButton: {fileID: 304852654}
 --- !u!82 &1718821482
 AudioSource:
   m_ObjectHideFlags: 0

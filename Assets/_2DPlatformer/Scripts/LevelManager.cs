@@ -35,6 +35,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private LevelTimer levelTimer;
 
+    [SerializeField]
+    private GameObject pauseButton;
+
     private void OnEnable()
     {
         levelFinish.OnPlayerFinish += FinishLevel;
@@ -60,6 +63,7 @@ public class LevelManager : MonoBehaviour
         audioSource.Play();
         levelTimer.GetClearTimes();
         victoryCanvas.SetActive(true);
+        pauseButton.SetActive(false);
         timePause.Pause();
     }
 

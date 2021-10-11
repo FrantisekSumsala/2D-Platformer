@@ -47126,6 +47126,7 @@ MonoBehaviour:
   victorySound: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
   audioSource: {fileID: 1542612239}
   levelTimer: {fileID: 658684387}
+  pauseButton: {fileID: 1560078993}
 --- !u!4 &1542612241
 Transform:
   m_ObjectHideFlags: 0
@@ -48919,7 +48920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6243333500126454539, guid: f65aada1c393edf4e8c989152de1878f, type: 3}
       propertyPath: m_Name
-      value: Return Button
+      value: Pause Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65aada1c393edf4e8c989152de1878f, type: 3}
